@@ -14,11 +14,15 @@ Dark green: #28b485
   box-sizing: border-box;
 }
 
+html{
+    font-size: 62.5%;/*root size ajusted to 10  */
+}
+
 body {
   font-family: "Lato", sans-serif;
-  font-weight: 400px;
+  font-weight: 4rem;
   line-height: 1.7;
-  font-size: 16px;
+  font-size: 1.6rem;
   padding: 3vh;
   color: #777;
 }
@@ -41,26 +45,26 @@ body {
 
 .logoBox {
   position: absolute;
-  top: 40px;
-  left: 40px;
+  top: 4rem;
+  left: 4rem;
 }
 
 .logo {
-  height: 35px;
+  height: 3.5rem;
 }
 
 .heading-primary {
   color: #ffffff;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
 
 }
 
 .heading-main {
   display: block;
-  font-size: 60px;
+  font-size: 6rem;
   font-weight: 400;
-  letter-spacing: 35px;
+  letter-spacing: 3.5rem;
 
   animation-name: moveInLeft;
 
@@ -71,9 +75,9 @@ body {
 
 .heading-sub {
   display: block;
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 400;
-  letter-spacing: 17.4px;
+  letter-spacing: 1.8rem;
 
   animation-name: moveInRight;
 
@@ -93,21 +97,21 @@ body {
 .btnHeader:visited{
     text-transform: uppercase;
     text-decoration: none;
-    padding:  15px 40px;
-    border-radius: 100px;
+    padding: 1.5rem 4rem;
+    border-radius: 10rem;
     transition: all .2s;
     position: relative;;
 
 }
 .btnHeader:hover{
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgb(0,0,0,.2);
+    box-shadow: 0 1rem 2rem rgb(0,0,0,.2);
 
 }
 
 .btnHeader:active{
     transform: translateY(-1px);
-    box-shadow: 0 10px 10px rgb(0,0,0,.2);
+    box-shadow: 0 1rem 1rem rgb(0,0,0,.2);
 }
 
 .btnHeader::after{
@@ -155,40 +159,40 @@ body {
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateX(-10rem);
   }
 
   30% {
-    transform: translateX(30px);
+    transform: translateX(3rem);
   }
 
   50% {
-    transform: translateX(-20px);
+    transform: translateX(-2rem);
   }
 
   80% {
     opacity: 1;
-    transform: translateX(0px) ;
+    transform: translateX(0rem) ;
   }
 }
 
 @keyframes moveInRight {
   0% {
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateX(10rem);
   }
 
   30% {
-    transform: translateX(-30px);
+    transform: translateX(-3rem);
   }
 
   50% {
-    transform: translateX(20px);
+    transform: translateX(2rem);
   }
 
   80% {
     opacity: 1;
-    transform: translateX(0px);
+    transform: translateX(0rem);
   }
 
 }
@@ -205,7 +209,7 @@ body {
 @keyframes moveBottom {
     0%{
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(3v);
     }   
     
     100%{
