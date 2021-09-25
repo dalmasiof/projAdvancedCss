@@ -28,7 +28,7 @@ body {
   /*to right, to top, to bottom, to left*/
   background-image: linear-gradient(
       to right bottom,
-      rgba(126, 213, 111, 0.8),
+      rgba(0, 255, 115, 0.8),
       rgba(40, 100, 131, 0.8)
     ),
     url("../img/hero.jpg");
@@ -43,7 +43,6 @@ body {
   position: absolute;
   top: 40px;
   left: 40px;
-  border: 1px solid black;
 }
 
 .logo {
@@ -53,6 +52,8 @@ body {
 .heading-primary {
   color: #ffffff;
   text-transform: uppercase;
+  margin-bottom: 20px;
+
 }
 
 .heading-main {
@@ -60,6 +61,12 @@ body {
   font-size: 60px;
   font-weight: 400;
   letter-spacing: 35px;
+
+  animation-name: moveInLeft;
+
+  animation-duration: 2s;
+  /* animation-delay: 3s; 
+  animation-iteration-count: 3;*/
 }
 
 .heading-sub {
@@ -67,11 +74,142 @@ body {
   font-size: 20px;
   font-weight: 400;
   letter-spacing: 17.4px;
+
+  animation-name: moveInRight;
+
+  animation-duration: 2s;
 }
 
 .text-box {
   position: absolute;
   top: 40%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+}
+
+.btnHeader:link,
+.btnHeader:visited{
+    text-transform: uppercase;
+    text-decoration: none;
+    padding:  15px 40px;
+    border-radius: 100px;
+    transition: all .2s;
+    position: relative;;
+
+}
+.btnHeader:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgb(0,0,0,.2);
+
+}
+
+.btnHeader:active{
+    transform: translateY(-1px);
+    box-shadow: 0 10px 10px rgb(0,0,0,.2);
+}
+
+.btnHeader::after{
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .4s;
+}
+
+.btnHeader:hover::after{
+    transform: scaleX(1.5) scaleY(2);
+    opacity: 0;
+
+}
+
+.btnWhite{
+    background-color: #ffffff;
+    color: #777;
+    display: inline-block;
+    
+}
+
+.btnWhite::after{
+    content: "";
+    background-color: #ffffff;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    z-index: -1;
+}
+
+.btnAnimated{
+    animation: moveBottom .5s ease-out .75s;
+    animation-fill-mode: backwards;
+}
+
+
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  30% {
+    transform: translateX(30px);
+  }
+
+  50% {
+    transform: translateX(-20px);
+  }
+
+  80% {
+    opacity: 1;
+    transform: translateX(0px) ;
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  30% {
+    transform: translateX(-30px);
+  }
+
+  50% {
+    transform: translateX(20px);
+  }
+
+  80% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+
+}
+@keyframes rotateLoop {
+    0%{
+
+    }   
+    
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes moveBottom {
+    0%{
+        opacity: 0;
+        transform: translateY(30px);
+    }   
+    
+    100%{
+        opacity: 1;
+        transform: translate(0); 
+       }
 }
