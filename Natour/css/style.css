@@ -6,3 +6,18 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
+/* Universal selector * */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header{
+
+}
+
+button{
+    background-color: red;
+}
