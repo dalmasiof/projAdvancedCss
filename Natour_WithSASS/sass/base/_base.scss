@@ -1,0 +1,20 @@
+@import "../abstract/_variables.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-size: 62.5%; /*root size ajusted to 10  */
+  }
+  
+  body {
+    font-family: "Lato", sans-serif;
+    font-weight: 4rem;
+    line-height: 1.7;
+    font-size: 1.6rem;
+    padding: 3vh;
+    color: $greyDarkCOlor;
+  }

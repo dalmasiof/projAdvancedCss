@@ -1,0 +1,42 @@
+@import "base/_animation.scss";
+@import "base/_base.scss";
+@import "base/_typography.scss";
+@import "base/_utilities.scss";
+
+@import "abstract/_mixins.scss";
+@import "abstract/_function.scss";
+@import "abstract/_variables.scss";
+
+@import "components/_button.scss";
+
+@import "layout/header.scss";
+
+@import "base/_typography.scss";
+
+
+@import "pages/_home.scss";
+
+
+
+
+.btn--White {
+  background-color: $whiteColor;
+  color: $greyDarkCOlor;
+  display: inline-block;
+}
+
+.btn--White::after {
+  content: "";
+  background-color: $whiteColor;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  z-index: -1;
+}
+
+.btn--Animated {
+  animation: moveBottom 0.5s ease-out 0.75s;
+  animation-fill-mode: backwards;
+}
+

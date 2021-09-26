@@ -1,0 +1,38 @@
+
+.btn--Header:link,
+.btn--Header:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  border-radius: 10rem;
+  transition: all 0.2s;
+  position: relative;
+
+  
+}
+.btn--Header:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.btn--Header:active {
+  transform: translateY(-1px);
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.btn--Header::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.4s;
+}
+
+.btn--Header:hover::after {
+  transform: scaleX(1.5) scaleY(2);
+  opacity: 0;
+}

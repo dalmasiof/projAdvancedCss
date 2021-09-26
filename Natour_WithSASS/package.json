@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile":"node-sass css/main.scss css/style.css"
+    "compile":"node-sass sass/main.scss css/style.css"
   },
   "author": "Dalmasio",
   "license": "ISC",
