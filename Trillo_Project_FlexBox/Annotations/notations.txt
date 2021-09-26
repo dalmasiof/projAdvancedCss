@@ -1,1 +1,16 @@
 Here is some annotations of flex-box layout
+
+container props{
+
+flex-direction:row | row-reverse, column, column-reverse // especify the direction of the main axis go
+
+flex-wrap: nowrap | wrap, wrap-reverse // especify if the content will break into a new line if have enough space
+
+justify-content: flex-start | flex-end, center, space-between, space-around, space-evenly // how the flex-items will align in container
+
+align-items: stretch | flex-start, flex-end,
+}
+
+item props{
+  
+}
