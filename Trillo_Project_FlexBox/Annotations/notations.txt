@@ -2,15 +2,35 @@ Here is some annotations of flex-box layout
 
 container props{
 
-flex-direction:row | row-reverse, column, column-reverse // especify the direction of the main axis go
+flex-direction:row | row-reverse, column, column-reverse; // especify the direction of the main axis go
 
-flex-wrap: nowrap | wrap, wrap-reverse // especify if the content will break into a new line if have enough space
+flex-wrap: nowrap | wrap, wrap-reverse; // especify if the content will break into a new line if have enough space
 
-justify-content: flex-start | flex-end, center, space-between, space-around, space-evenly // how the flex-items will align in container
+justify-content: flex-start | flex-end, center, space-between, space-around, space-evenly; // how the flex-items will align in container in the main axis,
 
-align-items: stretch | flex-start, flex-end,
+align-items: stretch | flex-start, flex-end; //how the flex items will be aligned in the cross axis,
+
+align-content: stretch | flex-start, flex-end, center, space-around, space-between;// how the flex arrows of container will be aligned
 }
 
 item props{
+  align-items: auto | stretch, flex-start, flex-end, center, baseline; // give a  item a different align from his parent container
   
+  order: <i>:integer; //give the order in list of itens
+   
+  //the three are related with item width
+  
+  flex-grow: <i>:integer; //define how much the item can grow
+  
+  flex-shrink: <i>:integer; //define how much the item can shrink
+  
+  flex-bases: auto | <lenght>; //define the flex bases width
+  
+  //these can be substitued by:
+  
+  flex: <i>:integer <i>:integer <lenght>:integer;
+  
+  Example: 
+  
+  flex: 0 0 auto;
 }
